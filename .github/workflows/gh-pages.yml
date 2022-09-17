@@ -24,6 +24,12 @@ jobs:
         run: sudo dpkg -i hugo.deb
       - name: Print hugo version
         run: hugo version
+      - name: Build website
+        run: sudo hugo 
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public # The folder the action should deploy.
 
 
 
