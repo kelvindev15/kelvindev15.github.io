@@ -16,10 +16,8 @@ jobs:
           submodules: true
           fetch-depth: 0
       - name: Setup Hugo
-        env:
-          HUGO_VERSION: 0.102.3
         run: |
-          HUGO_VERSION=1.102.3
+          HUGO_VERSION=0.102.3
           URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
           wget --retry-connrefused --waitretry=1 --read-timeout=20 "$URL" --output-document=hugo.deb
       - name: Install Hugo
