@@ -1,0 +1,31 @@
+name: build website
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Setup Hugo
+        env:
+          HUGO_VERSION: 1.102.3
+        run: |
+          HUGO_VERSION=1.102.3
+          URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb"
+          wget --retry-connrefused --waitretry=1 --read-timeout=20 "$URL" --output-document=hugo.deb
+      - name: Install Hugo
+        run: sudo dpkg -i hugo.deb
+      - name: Print hugo version
+        run: hugo version
+
+
+
