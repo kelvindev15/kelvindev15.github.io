@@ -11,3 +11,8 @@ unsafe = true
 baseName = "index"
 mediaType = "text/html"
 isHTML = true
+
+[params.reveal_hugo]
+width = '1920'
+height = '1080'
+
