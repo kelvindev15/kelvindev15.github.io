@@ -3,7 +3,7 @@
   <head>
 	<meta name="generator" content="Hugo 0.102.3" />
     <meta charset="utf-8">
-<title>My presentation</title>
+<title>Simualazione di evacuazione di folle con micro-interazioni fisiche ed elementi cognitivi</title>
 
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,11 +20,117 @@
       <div class="slides">
   
 
-    <section><h1 id="hello-world">Hello world!</h1>
-<p>This is my first slide.</p>
+    <section><h1 id="agenti-cognitivi-in-alchemist-per-la-simulazione-di-evacuazioni-di-folle">Agenti cognitivi in Alchemist per la simulazione di evacuazioni di folle</h1>
+<h1 id="stato-dellarte"><strong>Stato dell&rsquo;arte</strong></h1>
 </section><section>
-<h1 id="second-slide">Second slide</h1>
-<p>hello</p>
+<h1 id="overview">OVERVIEW</h1>
+<ol>
+<li>
+<p>Modello del pedone cognitivo</p>
+<ul>
+<li>Modello IMPACT</li>
+<li>Il pedone cognitivo</li>
+<li>Movimento del pedone cognitivo</li>
+</ul>
+</li>
+<li>
+<p>Modello di mappa mentale per l&rsquo;orientamento dei pedoni cognitivi</p>
+<ul>
+<li>Grafo dell&rsquo;ambiente e mappa cognitiva</li>
+<li>Pedoni con capacità di orientamento</li>
+<li>Comportamento dei pedoni</li>
+</ul>
+</li>
+<li>
+<p>Modello fisico del movimento del pedone cognitivo</p>
+<ul>
+<li>Il modello HiDAC</li>
+<li>Forze di evitamento e repulsione</li>
+<li>Cadute e spinte</li>
+</ul>
+</li>
+<li>
+<p>Simulazione Evacuazione di folla in Piazza San Carlo, Torino</p>
+</li>
+</ol>
+</section><section>
+<h1 id="modello-del-pedone-cognitivo">Modello del pedone cognitivo</h1>
+</section><section>
+<h2 id="il-modello-impact">Il modello IMPACT</h2>
+<p>Nasce con l&rsquo;obiettivo di non limitarsi alle sole leggi fisiche nella modellazione
+di agenti ma considerare le caratteristiche socio-culturali nonche una component emotiva
+fortemente infuenzabile.</p>
+<p>Ogni agente e contraddistinto da:</p>
+<ul>
+<li>età (bambino, adulto, anziano);</li>
+<li>sesso (uomo, donna).</li>
+</ul>
+</section><section>
+<h2 id="il-modello-impact-1">Il modello IMPACT</h2>
+<p>Le combinazioni di questi due attributi determinano un insieme di caratteristiche statiche e dinamiche.</p>
+<p>Le prime si mantengono tali per la durata della simulazione mentre le altre evolvono seguendo i principi del
+Network Oriented Modelling</p>
+<table>
+    <tr>
+        <th colspan="2">Caratteristiche</th>
+    </tr>
+    <tr>
+        <td>STATICHE</td>
+        <td>ATTIVE</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>Velocità</li>
+                <li>Conformità alle regole</li>
+                <li>Attidudine ad aituare</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Sensazione di pericolo</li>
+                <li>Paura</li>
+                <li>Desiderio/Intenzione di fuggire</li>
+                <li>Desiderio/Intenzione di non fuggire</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+</section><section>
+<h2 id="il-pedone-cognitivo">Il pedone cognitivo</h2>
+<p>Esistono tre livelli di dettaglio nella rappresentazione di un pedone:</p>
+<ul>
+<li><strong>Pedone omogeneo</strong>: pedone con una velocita predefinita di camminata e di corsa uguale per tutti;</li>
+<li><strong>Pedone eterogeneo</strong>: pedone con un sesso e un eta assegnati, dai quali saranno determinate velocita, conformita alle regole e
+attitudine ad aiutare;</li>
+<li><strong>Pedone cognitivo</strong>: pedone eterogeneo con delle emozioni, capace di influenzare e farsi influenzare dagli altri.</li>
+</ul>
+</section><section>
+<h2 id="movimento-del-pedone-cognitivo">Movimento del pedone cognitivo</h2>
+<p>I movimenti del pedone cognitivo in Alchemist seguono i comportamenti di steering introdotti da Reynolds.
+Hanno la funzione di muovere in maniera autonoma e realistica gli agenti sui quali non si possiede controllo.
+I comportamenti di steering sono basati sulla semplice formula:</p>
+<p>steering = desired_velocity - current_velocity</p>
+</section><section>
+<h1 id="modello-di-mappa-mentale-per-lorientamento-dei-pedoni-cognitivi">Modello di mappa mentale per l&rsquo;orientamento dei pedoni cognitivi</h1>
+</section><section>
+<h2 id="grafo-dellambiente">Grafo dell&rsquo;ambiente</h2>
+<h2 id="pedoni-con-capacità-di-orientamento">Pedoni con capacità di orientamento</h2>
+<h2 id="comportamento-dei-pedoni">Comportamento dei pedoni</h2>
+</section><section>
+<h1 id="modello-fisico-del-movimento-del-pedone-cognitivo">Modello fisico del movimento del pedone cognitivo</h1>
+</section><section>
+<h2 id="il-modello-hidac">Il modello HiDAC</h2>
+<h2 id="forze-di-evitamento-e-di-repulsione">Forze di evitamento e di repulsione</h2>
+<h2 id="cadute-e-spinte">Cadute e spinte</h2>
+</section><section>
+<h1 id="simulazione">Simulazione</h1>
+<h2 id="evacuazione-di-folla-in-piazza-san-carlo-torino">Evacuazione di folla in Piazza San Carlo, Torino</h2>
+</section><section>
+<h2 id="descrizione">Descrizione</h2>
+</section><section>
+<h2 id="risultati">Risultati</h2>
+</section><section>
 </section>
 
   
@@ -46,7 +152,7 @@
   document.getElementsByTagName('head')[0].appendChild(link);
 </script>
 
-<script type="application/json" id="reveal-hugo-site-params">null</script>
+<script type="application/json" id="reveal-hugo-site-params">{"height":"1080","width":"1920"}</script>
 <script type="application/json" id="reveal-hugo-page-params">null</script>
 
 <script src="/reveal-js/js/reveal.js"></script>
