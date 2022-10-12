@@ -21,7 +21,7 @@
   
 
     <section><h1 id="agenti-cognitivi-in-alchemist-per-la-simulazione-di-evacuazioni-di-folle">Agenti cognitivi in Alchemist per la simulazione di evacuazioni di folle</h1>
-<h1 id="stato-dellarte"><strong>Stato dell&rsquo;arte</strong></h1>
+<h2 id="stato-dellarte"><strong>Stato dell&rsquo;arte</strong></h2>
 </section><section>
 <h1 id="overview">OVERVIEW</h1>
 <ol>
@@ -37,8 +37,6 @@
 <p>Modello di mappa mentale per l&rsquo;orientamento dei pedoni cognitivi</p>
 <ul>
 <li>Grafo dell&rsquo;ambiente e mappa cognitiva</li>
-<li>Pedoni con capacità di orientamento</li>
-<li>Comportamento dei pedoni</li>
 </ul>
 </li>
 <li>
@@ -57,19 +55,27 @@
 <h1 id="modello-del-pedone-cognitivo">Modello del pedone cognitivo</h1>
 </section><section>
 <h2 id="il-modello-impact">Il modello IMPACT</h2>
-<p>Nasce con l&rsquo;obiettivo di non limitarsi alle sole leggi fisiche nella modellazione
-di agenti ma considerare le caratteristiche socio-culturali nonche una component emotiva
-fortemente infuenzabile.</p>
-<p>Ogni agente e contraddistinto da:</p>
+<ul>
+<li>Nasce con l&rsquo;obiettivo di non limitarsi alle sole leggi fisiche nella modellazione
+di agenti ma considerare le caratteristiche socio-culturali nonche una componente emotiva
+fortemente infuenzabile.</li>
+</ul>
+<p>Ogni agente è contraddistinto da:</p>
 <ul>
 <li>età (bambino, adulto, anziano);</li>
 <li>sesso (uomo, donna).</li>
 </ul>
 </section><section>
 <h2 id="il-modello-impact-1">Il modello IMPACT</h2>
+<ul>
+<li>
 <p>Le combinazioni di questi due attributi determinano un insieme di caratteristiche statiche e dinamiche.</p>
-<p>Le prime si mantengono tali per la durata della simulazione mentre le altre evolvono seguendo i principi del
-Network Oriented Modelling</p>
+</li>
+<li>
+<p>Le prime si mantengono tali per la durata della simulazione mentre le altre evolvono seguendo
+i principi del Network Oriented Modelling</p>
+</li>
+</ul>
 <table>
     <tr>
         <th colspan="2">Caratteristiche</th>
@@ -100,36 +106,146 @@ Network Oriented Modelling</p>
 <h2 id="il-pedone-cognitivo">Il pedone cognitivo</h2>
 <p>Esistono tre livelli di dettaglio nella rappresentazione di un pedone:</p>
 <ul>
-<li><strong>Pedone omogeneo</strong>: pedone con una velocita predefinita di camminata e di corsa uguale per tutti;</li>
-<li><strong>Pedone eterogeneo</strong>: pedone con un sesso e un eta assegnati, dai quali saranno determinate velocita, conformita alle regole e
-attitudine ad aiutare;</li>
-<li><strong>Pedone cognitivo</strong>: pedone eterogeneo con delle emozioni, capace di influenzare e farsi influenzare dagli altri.</li>
+<li>
+<p><strong>Pedone omogeneo</strong>: pedone con una velocita predefinita di camminata e di corsa uguale per tutti;</p>
+</li>
+<li>
+<p><strong>Pedone eterogeneo</strong>: pedone con un sesso e un eta assegnati, dai quali saranno determinate velocità,
+conformità alle regole e attitudine ad aiutare;</p>
+</li>
+<li>
+<p><strong>Pedone cognitivo</strong>: pedone eterogeneo con delle emozioni, capace di influenzare e farsi
+influenzare dagli altri.</p>
+</li>
 </ul>
 </section><section>
 <h2 id="movimento-del-pedone-cognitivo">Movimento del pedone cognitivo</h2>
-<p>I movimenti del pedone cognitivo in Alchemist seguono i comportamenti di steering introdotti da Reynolds.
-Hanno la funzione di muovere in maniera autonoma e realistica gli agenti sui quali non si possiede controllo.
-I comportamenti di steering sono basati sulla semplice formula:</p>
+<ul>
+<li>
+<p>I movimenti del pedone cognitivo in Alchemist seguono i comportamenti di steering introdotti da Reynolds.</p>
+</li>
+<li>
+<p>Hanno la funzione di muovere in maniera autonoma e realistica gli agenti sui quali non
+si possiede controllo.</p>
+</li>
+<li>
+<p>I comportamenti di steering sono basati sulla semplice formula:</p>
+</li>
+</ul>
 <p>steering = desired_velocity - current_velocity</p>
 </section><section>
-<h1 id="modello-di-mappa-mentale-per-lorientamento-dei-pedoni-cognitivi">Modello di mappa mentale per l&rsquo;orientamento dei pedoni cognitivi</h1>
+<h1 id="modello-di-mappa-mentale-per-lorientamento-del-pedone-cognitivo">Modello di mappa mentale per l&rsquo;orientamento del pedone cognitivo</h1>
 </section><section>
+<h2 id="mappa-mentale-del-pedone-cognitivo">Mappa mentale del pedone cognitivo</h2>
+<ul>
+<li>
+<p>Struttura che modella la conoscenza spaziale di ciascun pedone, composta di:</p>
+<ul>
+<li><strong>oggetti</strong>: costituiscono tipicamente dei punti di riferimento per il pedone</li>
+<li><strong>relazioni spaziali</strong>: connessioni dirette od indirette tra gli oggetti</li>
+</ul>
+</li>
+<li>
+<p>Gli oggetti prendono il nome di <strong>landmarks</strong> e assieme alle relazioni spaziali costituiscono gli
+elementi fondamentali per l&rsquo;orientamento.</p>
+</li>
+</ul>
 <h2 id="grafo-dellambiente">Grafo dell&rsquo;ambiente</h2>
-<h2 id="pedoni-con-capacità-di-orientamento">Pedoni con capacità di orientamento</h2>
-<h2 id="comportamento-dei-pedoni">Comportamento dei pedoni</h2>
+<ul>
+<li>L&rsquo;ambiente viene modellato mediante un grafo di navigazione G=(V,E)
+<ul>
+<li><strong>V</strong>: poligoni convessi rappresentanti le <em>walkable areas</em></li>
+<li><strong>E</strong>: rappresentano le connessioni tra aree</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<h1 id="mappa-mentale">Mappa mentale</h1>
+<p><img src="/images/cognitive_map.png" alt="cognitive map"></p>
+</section><section>
+<h1 id="grafo-dellambiente-1">Grafo dell&rsquo;ambiente</h1>
+<p><img src="/images/navigation-graph.jpeg" alt="navigation graph"></p>
 </section><section>
 <h1 id="modello-fisico-del-movimento-del-pedone-cognitivo">Modello fisico del movimento del pedone cognitivo</h1>
 </section><section>
 <h2 id="il-modello-hidac">Il modello HiDAC</h2>
+<p>Modello a forze sociali di riferimento (Pelechano et al.) .</p>
+<ul>
+<li>
+<p>Considerazioni:</p>
+<ul>
+<li>Ogni pedone desidera muoversi con una certa velocità in una determinata direzione</li>
+<li>Nel compiere questo spostamento vuole mantenere una certa distanza dai muri e dagli altri pedoni</li>
+</ul>
+</li>
+<li>
+<p>HiDAC prevede:</p>
+<ul>
+<li>
+<p>Uno strato di alto livello, equivalente al modello cognitivo introdotto in Alchemist,
+che individua il prossimo punto che si vuole raggiungere</p>
+</li>
+<li>
+<p>Uno strato di basso livello che aggiusta il punto d&rsquo;interesse sulla base di vincoli ed interazioni
+di natura fisica.</p>
+</li>
+</ul>
+</li>
+</ul>
+</section><section>
 <h2 id="forze-di-evitamento-e-di-repulsione">Forze di evitamento e di repulsione</h2>
+<ul>
+<li>La <strong>forza di evitamento</strong> è una forza tangenziale con lo scopo di curvare la traiettoria dei pedoni per
+evitare collisioni tra essi.</li>
+</ul>
+<p><img src="/images/avoidance_force.jpeg" alt="avoidance"></p>
+<ul>
+<li>La <strong>forza di repulsione</strong> entra in gioco quando un pedone si vede occupare la sua area di comfort da un
+altro pedone</li>
+</ul>
+</section><section>
 <h2 id="cadute-e-spinte">Cadute e spinte</h2>
+<ul>
+<li>
+<p>E&rsquo; possibile far emergere comportamenti di spinte attribuendo soglie di spazio interpersonale differenti
+a ciascun pedone.</p>
+</li>
+<li>
+<p>La caduta di un pedone si verifica quando la risultante delle forze di repulsione che riceve è
+sufficientemente grande da fargli perdere l&rsquo;equilibrio (es. il modulo della forza supera il modulo della velocità
+in corsa del pedone)</p>
+</li>
+</ul>
+<p><img src="/images/pushing_behavior.jpeg" alt="pushing behavior"></p>
 </section><section>
 <h1 id="simulazione">Simulazione</h1>
 <h2 id="evacuazione-di-folla-in-piazza-san-carlo-torino">Evacuazione di folla in Piazza San Carlo, Torino</h2>
 </section><section>
 <h2 id="descrizione">Descrizione</h2>
+<ul>
+<li>In una riproduzione di Piazza San Carlo sono stati posizionati:
+<ul>
+<li>oltre 40,000 nodi cognitivi di eta e generi diversi.</li>
+<li>una zona di pericolo nel punto si presumibilmente ha avuto origine l&rsquo;isteria di massa.</li>
+</ul>
+</li>
+</ul>
+</section><section>
+<h2 id="simulazione-1">Simulazione</h2>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/owrbB-F12oQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 </section><section>
 <h2 id="risultati">Risultati</h2>
+<p>Una volta avviata la simulazione è possibile osservare:</p>
+<ul>
+<li>come il panico di diffonda sulla folla per via del contagio sociale.</li>
+<li>I pedoni che hanno avuto esperienza diretta con il pericolo fuggono spingendo coloro che non hanno ancora visto nulla.</li>
+<li>L&rsquo;onda, simile a quella osservata nei filmati che ritraggono la tragedia realmente accaduta,
+derivante dalle spinte dei pedoni in fuga.</li>
+</ul>
 </section><section>
 </section>
 
